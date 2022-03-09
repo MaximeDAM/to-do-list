@@ -1,0 +1,38 @@
+//------------------Variables ---------------------
+
+//------------------General---------------------
+$colorPrimary: #000;
+$size: 2rem;
+$font-sizes: (
+  normal: $size,
+  big: $size * 1.5,
+  giant: $size * 2
+);
+$font-size: map-get($font-sizes, normal);
+$fontSizeHead1: map-get($font-sizes, giant);
+$fontSizeHead2: map-get($font-sizes, big);
+$fontSizeHead3: $font-size;
+
+//------------------Menu Burger---------------------
+$backgroundColorMenu: rgba(#000, 70%);
+//------------------Header---------------------
+//------------------Article ---------------------
+$colorArticle: #fff;
+$backgroundColorArticle: rgba(#000, 80%);
+
+//------------------Aside ---------------------
+$colorAside: #fff;
+$backgroundColorAside: rgba(#000, 77%);
+$colorArrow: #fff;
+
+//------------------Footer---------------------
+$backgroundColorFoot: rgba(#000, 90%);
+
+//------------------Responsive---------------------
+
+$breakpoints: (
+  mobile: 480px,
+  tablette: 768px,
+  Landtop: 1024px,
+  desktop: 1200px,
+);

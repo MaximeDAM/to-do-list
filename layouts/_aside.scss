@@ -1,0 +1,11 @@
+//------------------Aside---------------------
+.aside {
+  grid-area: aside;
+  padding: 2rem;
+  flex-basis: 30%;
+  background: linear-gradient(to top, #f2ecf8, #d9cae7);
+  clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+  & p {
+    width: 70%;
+  }
+}

@@ -1,0 +1,233 @@
+@font-face {
+  font-family: "Cream";
+  src: url("/assets/fonts/cream-DEMO.otf"), url("/assets/fonts/cream-DEMO.ttf");
+}
+html {
+  font-size: 62.5%;
+}
+
+* {
+  font-family: "Cream", sans-serif;
+  font-size: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 4rem;
+  text-align: center;
+  margin: 3rem auto;
+}
+
+h2 {
+  width: 70%;
+  text-align: center;
+  padding: 0 1rem;
+  font-size: 3rem;
+  margin-bottom: 0;
+}
+
+h3 {
+  font-size: 2rem;
+  text-align: left;
+  margin-left: 6rem;
+}
+
+button {
+  border-radius: 1rem;
+  padding: 0.3rem 2rem;
+  border: 0.1rem solid #000;
+  cursor: pointer;
+}
+
+p {
+  text-indent: 2rem;
+  text-align: justify;
+  line-height: 4rem;
+  padding: 1rem;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+input {
+  outline: none;
+  border: 0.2rem solid black;
+}
+input:focus {
+  border: 0.2rem solid #C9ECB7;
+}
+
+.grid_container {
+  display: grid;
+  margin: 0 auto;
+  grid-template-areas: "header header header" "main main main" "footer footer footer";
+}
+
+.header {
+  grid-area: header;
+}
+
+.main {
+  grid-area: main;
+  -ms-flex-preferred-size: 70%;
+      flex-basis: 70%;
+  padding: 0 10rem;
+  gap: 1%;
+  margin: 6rem auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.article {
+  grid-area: article;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+.article #add {
+  background: radial-gradient(circle, #f2ecf8, #d9cae7);
+}
+.article #add:hover {
+  background: #f2ecf8;
+}
+.article #task {
+  border-radius: 1rem;
+  padding-left: 1rem;
+  margin: 1rem;
+}
+.article .ListTodo__task .formTodo__task {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 2rem;
+  border-radius: 1.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.article .ListTodo__task .formTodo__task:hover {
+  background-color: #efe7f6;
+}
+.article .ListTodo__task .formTodo__task input[type=text] {
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  margin: 0.4rem 1rem 0.4rem 1rem;
+  border-radius: 1rem;
+  border: 0.2rem solid #ad95c8;
+  padding-left: 1rem;
+}
+.article .ListTodo__task .formTodo__task input[type=text]:focus {
+  border: 0.2rem solid #c9ecb7;
+}
+.article .ListTodo__task .formTodo__task input[type=checkbox] {
+  position: absolute;
+  top: 1.2rem;
+  left: 1rem;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  cursor: pointer;
+  background-color: #fff;
+  border: 0.2rem solid #000;
+  border-radius: 0.2em;
+  width: 1.8rem;
+  height: 1.8rem;
+}
+.article .ListTodo__task .formTodo__task input[type=checkbox]:checked {
+  background-color: #ad95c8;
+}
+.article .ListTodo__task .formTodo__task input[type=checkbox]:checked + label {
+  color: #ad95c8;
+  text-decoration: line-through;
+}
+.article .ListTodo__task .formTodo__task label {
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  cursor: pointer;
+  padding: 1rem 2rem 1rem 4.5rem;
+  line-height: 100%;
+}
+.article .ListTodo__task .formTodo__task #edit {
+  background: radial-gradient(circle, #dff5d4, #c1e9ad);
+}
+.article .ListTodo__task .formTodo__task #edit:hover {
+  background: #dff5d4;
+}
+.article .ListTodo__task .formTodo__task #save {
+  background: radial-gradient(circle, #dff5d4, #c1e9ad);
+  margin-left: 1rem;
+}
+.article .ListTodo__task .formTodo__task #save:hover {
+  background: #dff5d4;
+}
+.article .ListTodo__task .formTodo__task #supr {
+  background: radial-gradient(circle, #ffaaaa, #d46a6a);
+  margin: 0.5rem 1rem;
+}
+.article .ListTodo__task .formTodo__task #supr:hover {
+  background: #ffaaaa;
+}
+.article .ListTodo__task .formTodo__task #cancel {
+  margin: 0.5rem 1rem;
+  background: radial-gradient(circle, #ffaaaa, #d46a6a);
+}
+.article .ListTodo__task .formTodo__task #cancel:hover {
+  background: #ffaaaa;
+}
+
+.aside {
+  grid-area: aside;
+  padding: 2rem;
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+  background: -webkit-gradient(linear, left bottom, left top, from(#f2ecf8), to(#d9cae7));
+  background: linear-gradient(to top, #f2ecf8, #d9cae7);
+  -webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+          clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+}
+.aside p {
+  width: 70%;
+}
+
+.footer {
+  grid-area: footer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+  body {
+    background-color: red;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  body {
+    background-color: green;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  body {
+    background-color: orange;
+  }
+}
+@media (max-width: 480px) {
+  body {
+    background-color: yellow;
+  }
+}

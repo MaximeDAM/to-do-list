@@ -1,0 +1,100 @@
+//------------------Main---------------------
+.main {
+  grid-area: main;
+  flex-basis: 70%;
+  padding: 0 10rem;
+  gap: 1%;
+  margin: 6rem auto;
+  display: flex;
+}
+//------------------Article---------------------
+.article {
+  grid-area: article;
+  order: 1;
+  #add {
+      background: radial-gradient(circle, #f2ecf8, #d9cae7);
+      &:hover {
+        background: #f2ecf8;
+      }
+    }
+  #task {
+    border-radius: 1rem;
+    padding-left: 1rem;
+    margin: 1rem;
+  }
+  .ListTodo__task {
+    .formTodo__task {
+      position: relative;
+      display: flex;
+      margin-top: 2rem;
+      border-radius: 1.5rem;
+      align-items: center;
+      justify-content: flex-end;
+      &:hover {
+        background-color: #efe7f6;
+      }
+      input[type="text"] {
+        flex-grow: 2;
+        margin: 0.4rem 1rem 0.4rem 1rem;
+        border-radius: 1rem;
+        border: 0.2rem solid #ad95c8;
+        padding-left: 1rem;
+        &:focus {
+          border: 0.2rem solid #c9ecb7;
+        }
+      }
+      input[type="checkbox"] {
+        position: absolute;
+        top: 1.2rem;
+        left: 1rem;
+        appearance: none;
+        cursor: pointer;
+        background-color: #fff;
+        border: 0.2rem solid $colorPrimary;
+        border-radius: 0.2em;
+        width: 1.8rem;
+        height: 1.8rem;
+        &:checked {
+          background-color: #ad95c8;
+          & + label {
+            color: #ad95c8;
+            text-decoration: line-through;
+          }
+        }
+      }
+      label {
+        flex-grow: 2;
+        cursor: pointer;
+        padding: 1rem 2rem 1rem 4.5rem;
+        line-height: 100%;
+      }
+        #edit {
+          background: radial-gradient(circle, #dff5d4, #c1e9ad);
+          &:hover {
+            background: #dff5d4;
+          }
+        }
+        #save {
+          background: radial-gradient(circle, #dff5d4, #c1e9ad);
+          margin-left: 1rem; 
+          &:hover {
+            background: #dff5d4;
+          }
+        }
+        #supr {
+          background: radial-gradient(circle, #ffaaaa, #d46a6a);
+          margin: 0.5rem 1rem;
+          &:hover {
+            background: #ffaaaa;
+          }
+        }
+        #cancel {
+          margin: 0.5rem 1rem;
+          background: radial-gradient(circle, #ffaaaa, #d46a6a);
+          &:hover {
+            background: #ffaaaa;
+          }
+      }
+    }
+  }
+}

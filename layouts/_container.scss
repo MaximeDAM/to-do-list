@@ -1,0 +1,13 @@
+//------------------Grid layout ---------------------
+
+.grid_container {
+  display: grid;
+  margin: 0 auto;
+  grid-template-areas:
+    "header header header"
+    "main main main"
+    "footer footer footer";
+}
+
+
+
